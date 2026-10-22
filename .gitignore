@@ -1,0 +1,36 @@
+# Artefactos de compilación de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Artefactos de PyInstaller
+build/
+dist/
+
+# Entornos virtuales
+venv/
+.venv/
+env/
+ENV/
+
+# Variables de entorno
+.env
+.env.*
+
+# Pruebas y cobertura
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Cachés de herramientas
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Windows
+Thumbs.db
+desktop.ini
+
+# Editores / IDE
+.vscode/
+.idea/
