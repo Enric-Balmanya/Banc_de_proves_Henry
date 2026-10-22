@@ -31,6 +31,25 @@ norma IEC 60062. Debe permitir:
 - Al terminar una tarea, abrir un pull request hacia `main`.
 - Nunca fusionar pull requests: esa acción la realiza siempre el usuario.
 
+## Equipo de subagentes
+
+El proyecto cuenta con cuatro subagentes definidos en `.claude/agents/`:
+
+- **programador**: implementa y corrige la lógica y la interfaz de la
+  calculadora.
+- **tester**: escribe y ejecuta pruebas con pytest; no corrige código de la
+  aplicación, solo informa de errores.
+- **revisor**: solo lectura; revisa código y pruebas buscando errores,
+  código poco claro y desviaciones de estas normas (con especial atención
+  a la corrección según IEC 60062) y entrega un informe.
+- **documentador**: mantiene el README y la documentación de uso, en
+  castellano y pensada para un usuario sin conocimientos de programación.
+
+Orden habitual de trabajo: programador → tester → revisor →
+documentador, volviendo al programador si el tester o el revisor
+detectan algún fallo. Los subagentes no crean ramas ni cambian de rama:
+siempre trabajan en la rama que ya ha preparado el agente principal.
+
 ## Archivos
 
 - No borrar archivos. Si parece necesario eliminar algo, proponerlo al
